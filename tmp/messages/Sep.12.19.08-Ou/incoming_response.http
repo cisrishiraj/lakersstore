@@ -1,0 +1,13 @@
+HTTP/1.1 302 Found
+Date: Thu, 12 Sep 2013 13:37:24 GMT
+Server: Apache
+Last-Modified: Thu, 12 Sep 2013 13:37:24 +0000
+Cache-Control: no-cache, must-revalidate, post-check=0, pre-check=0
+ETag: "1378993044"
+Location: http://lakersstore.com/content/lakers-ladies-touch-signature-denim-pants-navy
+Vary: Accept-Encoding,User-Agent
+Content-Encoding: gzip
+Content-Length: 20
+Connection: close
+Content-Type: text/html; charset=utf-8
+

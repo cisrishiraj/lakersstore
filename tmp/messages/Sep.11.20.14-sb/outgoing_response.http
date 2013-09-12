@@ -1,0 +1,7 @@
+HTTP/1.0 535 Internal Server Error
+Connection: close
+Content-Type: text/plain;
+Content-Length: 137
+
+/opt/lampp/htdocs/lakersstore/scripts/sections/footer.ts:46 -- parenthesized argument list expected in call to li; found unexpected `)`
+

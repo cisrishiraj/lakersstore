@@ -1,0 +1,7 @@
+HTTP/1.0 535 Internal Server Error
+Connection: close
+Content-Type: text/plain;
+Content-Length: 132
+
+/opt/lampp/htdocs/lakersstore/scripts/pages/catalog.ts:122 -- statement must consist of import or expression; found unexpected `}`
+

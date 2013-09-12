@@ -1,0 +1,13 @@
+HTTP/1.1 302 Found
+Date: Thu, 12 Sep 2013 10:17:12 GMT
+Server: Apache
+Last-Modified: Thu, 12 Sep 2013 10:17:12 +0000
+Cache-Control: no-cache, must-revalidate, post-check=0, pre-check=0
+ETag: "1378981032"
+Location: http://lakersstore.com/content/los-angeles-lakers-center-court-stars-tee-purple
+Vary: Accept-Encoding,User-Agent
+Content-Encoding: gzip
+Content-Length: 20
+Connection: close
+Content-Type: text/html; charset=utf-8
+

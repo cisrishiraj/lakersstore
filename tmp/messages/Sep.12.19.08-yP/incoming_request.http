@@ -1,0 +1,12 @@
+GET /catalog/power-deals HTTP/1.1
+Host: mlocal.lakersstore.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:22.0) Gecko/20100101 Firefox/22.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://mlocal.lakersstore.com/catalog/mens
+Cookie: SESSbac12787c874bd5fdcaa06e1953a292a=2b505a1c1a594dba41050efeed43bbb4; __atuvc=3%7C37
+Connection: keep-alive
+If-Modified-Since: Thu, 12 Sep 2013 13:16:38 +0000
+If-None-Match: "1378991798"
+

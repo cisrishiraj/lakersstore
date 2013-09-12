@@ -1,0 +1,11 @@
+GET /content/los-angeles-lakers-center-court-stars-tee-purple HTTP/1.0
+Host: lakersstore.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:22.0) Gecko/20100101 Firefox/22.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip,deflate
+Referer: http://lakersstore.com/catalog/new-arrivals?page=1
+Cookie: SESSbac12787c874bd5fdcaa06e1953a292a=2b505a1c1a594dba41050efeed43bbb4; __atuvc=1%7C37
+Connection: close
+Via: 1.0 moovweb
+

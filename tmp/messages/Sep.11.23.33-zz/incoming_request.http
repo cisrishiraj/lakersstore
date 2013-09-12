@@ -1,0 +1,9 @@
+GET / HTTP/1.1
+Accept: */*
+User-Agent: WWW-Mechanize/1.0.0 (http://rubyforge.org/projects/mechanize/)
+Connection: close
+Accept-Encoding: gzip,identity
+Accept-Language: en-us,en;q=0.5
+Host: 192.168.2.81
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+

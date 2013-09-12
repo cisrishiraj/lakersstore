@@ -1,0 +1,524 @@
+/*
+    vertical-rhythmic
+    
+    Version : 0.3.1
+    Original Author  : Aurélien Delogu (dev@dreamysource.fr)
+    Additional Author: Jeff Patzer (jeff@patzer.us)
+    License : MIT
+*/
+/*
+    number $base-font-size: base font-size which will be applied to the body (default: 1em)
+*/
+/*
+    number $base-line-height: base line-height which will be applied to the body (default: 1.5em)
+*/
+/*
+    Adjust a unit to be relative if in PX to allow for arithmetic
+*/
+/*
+    Initialize the rhythm
+*/
+/*
+    Return a rhythm
+
+    Parameters
+        integer $lines      : number of whitespace lines (default: 1)
+                              You can specify "auto" value and it will generate a proportional value from the base line-height (especially useful when you want to set a good line-height value)
+        number $font-size   : font size, in ems
+*/
+/*
+    Return a rhythm from pixel unit
+
+    Parameters
+        integer $width      : width of the rhythm (without px unit)
+        number $font-size   : font size, in ems
+*/
+/*
+    Set a new font-size and automatically adapt the line-height
+
+    Parameters
+        number $font-size   : font size, in ems
+        integer $lines      : number of whitespace lines for the line-height
+                              Keeps base line proportions by default
+*/
+/*
+    Add a margin around a box
+
+    Parameters
+        integer $lines          : number of whitespace lines (default: 1)
+        number $font-size       : actual font-size, in ems, to calculate with (default: 1em)
+        integer $border-width   : width of additionnal borders around the box
+                                  Useful to substract borders from the whitespace to not break the rhythm
+*/
+/*
+    Add a top margin to a box
+
+    Parameters
+        integer $lines          : number of whitespace lines (default: 1)
+        number $font-size       : actual font-size, in ems, to calculate with (default: 1em)
+        integer $border-width   : width of additionnal borders around the box
+                                  Useful to substract borders from the whitespace to not break the rhythm
+*/
+/*
+    Add a bottom margin to a box
+
+    Parameters
+        integer $lines          : number of whitespace lines (default: 1)
+        number $font-size       : actual font-size, in ems, to calculate with (default: 1em)
+        integer $border-width   : width of additionnal borders around the box
+                                  Useful to substract borders from the whitespace to not break the rhythm
+*/
+/*
+    Add a padding around a box
+
+    Parameters
+        integer $lines          : number of whitespace lines (default: 1)
+        number $font-size       : actual font-size, in ems, to calculate with (default: 1em)
+        integer $border-width   : width of additionnal borders around the box
+                                  Useful to substract borders from the whitespace to not break the rhythm
+*/
+/*
+    Add a top padding to a box
+
+    Parameters
+        integer $lines          : number of whitespace lines (default: 1)
+        number $font-size       : actual font-size, in ems, to calculate with (default: 1em)
+        integer $border-width   : width of additionnal borders around the box
+                                  Useful to substract borders from the whitespace to not break the rhythm
+*/
+/*
+    Add a bottom padding to a box
+
+    Parameters
+        integer $lines          : number of whitespace lines (default: 1)
+        number $font-size       : actual font-size, in ems, to calculate with (default: 1em)
+        integer $border-width   : width of additionnal borders around the box
+                                  Useful to substract borders from the whitespace to not break the rhythm
+*/
+/*
+    Add a top border around a box
+
+    Parameters
+        string $color       : color
+        number $font-size   : font-size of the box (in em)
+        integer $width      : border width
+                              It quite equals to pixels but it depends on the base font-size of the browser, so it takes no unit
+        string $type        : border type
+*/
+/*
+    Add a top border to a box
+
+    Parameters
+        string $color       : color
+        number $font-size   : font-size of the box (in em)
+        integer $width      : border width
+                              It quite equals to pixels but it depends on the base font-size of the browser, so it takes no unit
+        string $type        : border type
+*/
+/*
+    Add a bottom border to a box
+
+    Parameters
+        string $color       : color
+        number $font-size   : font-size of the box (in em)
+        integer $width      : border width
+                              It quite equals to pixels but it depends on the base font-size of the browser, so it takes no unit
+        string $type        : border type
+*/
+/*
+    Add an outline around a box
+
+    Parameters
+        string $color       : color
+        number $font-size   : font-size of the box (in em)
+        integer $width      : border width
+                              It quite equals to pixels but it depends on the base font-size of the browser, so it takes no unit
+        string $type        : outline type
+*/
+/* line 7, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_base */
+html {
+  height: 100%;
+  overflow: auto !important; }
+
+/* line 12, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_base */
+body {
+  -webkit-text-size-adjust: none;
+  background: white;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Verdana;
+  position: relative;
+  min-height: 100%; }
+
+/* line 21, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_base */
+a {
+  color: #336699;
+  text-decoration: none;
+  word-wrap: break-word; }
+
+/* line 27, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_base */
+a, a:link {
+  -webkit-tap-highlight-color: rgba(225, 244, 204, 0.5); }
+
+/* line 31, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_base */
+img {
+  max-width: 100%; }
+
+/* line 35, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_base */
+input[type="number"]::-webkit-outer-spin-button {
+  display: none; }
+
+/*  #######################################
+    ####### URANIUM WIDGET STYLING ########
+    #######################################  */
+/* line 6, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+[data-ur-toggler-component="content"] {
+  display: none; }
+  /* line 8, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+  [data-ur-toggler-component="content"]:not([data-ur-state]) {
+    display: none; }
+  /* line 11, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+  [data-ur-toggler-component="content"][data-ur-state="enabled"] {
+    display: block; }
+
+/* line 17, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+[data-ur-tabs-component="content"] {
+  display: none; }
+  /* line 19, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+  [data-ur-tabs-component="content"]:not([data-ur-state]) {
+    display: none; }
+  /* line 22, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+  [data-ur-tabs-component="content"][data-ur-state="enabled"] {
+    display: block; }
+
+/* line 28, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+[data-ur-state="hide"] {
+  display: none !important; }
+
+/* line 33, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+div[data-ur-carousel-component='view_container'] {
+  width: 100%;
+  overflow-x: hidden; }
+
+/* line 37, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+div[data-ur-carousel-component="scroll_container"] {
+  display: block;
+  clear: both; }
+  /* line 40, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+  div[data-ur-carousel-component="scroll_container"] > * {
+    display: inline-block;
+    float: left; }
+
+/* line 46, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+a[data-ur-carousel-component="item"] img {
+  -webkit-user-drag: none; }
+
+/* line 50, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+[data-ur-carousel-component="dots"] {
+  text-align: center;
+  margin-bottom: 10px; }
+
+/* line 54, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+[data-ur-carousel-component="dot"] {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background: black;
+  display: inline-block;
+  margin: 0 1px;
+  opacity: 0.8;
+  width: 10px;
+  height: 10px; }
+  /* line 62, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_uranium.scss */
+  [data-ur-carousel-component="dot"][data-ur-state="inactive"] {
+    opacity: 0.3; }
+
+/* line 35, /opt/lampp/htdocs/lakersstore/assets/stylesheets/globals/_vertical_rhythmic */
+html, body {
+  font-size: 13px;
+  line-height: 1.84615em; }
+
+
+
+
+/* line 6, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none; }
+
+@font-face {
+  font-family: 'arvoregular';
+  src: url('fonts/arvo-regular-webfont.eot');
+  src: url('fonts/arvo-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/arvo-regular-webfont.woff') format('woff'), url('fonts/arvo-regular-webfont.ttf') format('truetype'), url('fonts/arvo-regular-webfont.svg#arvoregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'bebas_neueregular';
+  src: url('fonts/bebasneue-webfont.eot');
+  src: url('fonts/bebasneue-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/bebasneue-webfont.woff') format('woff'), url('fonts/bebasneue-webfont.ttf') format('truetype'), url('fonts/bebasneue-webfont.svg#bebas_neueregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 38, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: black; }
+
+/* line 39, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.wrap {
+  width: 100%; }
+
+/* line 41, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.header {
+  width: 100%;
+  height: 104px;
+  background: url(/_moovweb_local_assets_/images/header-bg.jpg) top repeat-x;
+  border-bottom: solid 5px #8301bd; }
+
+/* line 43, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.logo {
+  float: left;
+  padding: 20px 0 0 27px; }
+
+/* line 45, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.list-1 {
+  width: 200px;
+  float: right;
+  border: solid 5px #8301bd;
+  border-bottom: 0px;
+  background: black;
+  margin: 22px 0 0 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px; }
+
+/* line 51, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.list-1 li {
+  float: left;
+  list-style: none;
+  padding: 20px 8px 20px 8px;
+  line-height: 0; }
+
+/* line 52, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.list-1 li span {
+  width: 41px;
+  color: #fbcc36;
+  font-size: 32px;
+  float: right;
+  font-weight: bold;
+  text-align: center; }
+
+/* line 54, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.bdr {
+  border-bottom: solid 2px #8301bd;
+  border-left: solid 2px #8301bd; }
+
+/* line 56, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.search {
+  width: 100%;
+  background: black;
+  border-bottom: solid 5px #8301bd;
+  padding: 15px 0px; }
+
+/* line 58, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.S-bg {
+  width: 80%;
+  margin: 0px auto; }
+
+/* line 60, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.s-flid {
+  width: 73%;
+  height: 52px;
+  background: url(/_moovweb_local_assets_/images/S-bg.jpg) top repeat-x;
+  border: 0px;
+  color: #db6bfe;
+  font-size: 30px;
+  padding: 0px 10px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px; }
+
+/* line 66, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.s-btn {
+  width: 98px;
+  height: 50px;
+  margin-left: 10px;
+  background: url(/_moovweb_local_assets_/images/btn.jpg) top repeat-x;
+  text-align: center;
+  border: 0px;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  font-family: 'arvoregular'; }
+
+/* line 72, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.menur {
+  background: none repeat scroll 0 0 #9502d4;
+  position: absolute;
+  z-index: 1000; }
+
+/* line 77, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.menur .menur_leaf {
+  float: left;
+  width: 100%; }
+
+/* line 81, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.menur .menur_leaf:hover {
+  background: none repeat scroll 0 0 black;
+  border: solid 1px #8301bd; }
+
+/* line 85, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.menur .menur_leaf a {
+  color: white; }
+
+/* line 89, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.banner {
+  width: 100%;
+  text-align: center; }
+
+/* line 91, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.fallow {
+  width: 100%;
+  height: 67px;
+  background: url(/_moovweb_local_assets_/images/fallow.jpg) top repeat-x;
+  position: relative; }
+
+/* line 93, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.fallow p {
+  font-size: 26px;
+  color: white;
+  line-height: 67px;
+  padding: 0px 15px;
+  font-family: 'bebas_neueregular'; }
+
+/* line 95, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+a.face {
+  position: absolute;
+  width: 111px;
+  height: 103px;
+  right: 9px;
+  top: -26px; }
+
+/* line 97, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.menu {
+  width: 98%; }
+
+/* line 98, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.menu li {
+  margin: 0px;
+  padding: 0px;
+  background: url(/_moovweb_local_assets_/images/menu.png) top repeat-x;
+  padding: 33px 20px 33px 15px; }
+
+/* line 99, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.menu li a {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background: url(/_moovweb_local_assets_/images/plus.png) right no-repeat;
+  text-align: left; }
+
+/* line 100, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.menu li a:hover {
+  color: #fbcc36; }
+
+/* line 105, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.gray {
+  background: url(/_moovweb_local_assets_/images/menu-1.png) top repeat-x !important; }
+
+/* line 109, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.footer {
+  width: 48%;
+  margin: 0px auto;
+  padding: 50px 0px;
+  font-size: 16px;
+  color: #7d7d7d;
+  text-align: center; }
+
+/* line 110, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.footer a {
+  font-size: 17px;
+  color: white;
+  padding: 0px 3px;
+  line-height: 30px; }
+
+/* line 111, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.footer a:hover {
+  color: #fbcc36; }
+
+/* line 113, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.social {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0 0 0px; }
+
+/* line 114, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.social li {
+  display: inline;
+  margin: 0px 10px; }
+
+/* line 115, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+ul.social li:hover {
+  opacity: 0.8; }
+
+/* line 117, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.catalog {
+  list-style: none outside none;
+  margin-left: 0;
+  margin-top: 40px;
+  padding-left: 0;
+  width: 100%; }
+
+/*catelog css*/
+/* line 126, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+#titlebar {
+  background-color: #9502d4;
+  border-radius: 5px 5px 5px 5px;
+  color: #d057fb;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+/* line 135, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.productbox {
+  border: 5px solid #8301bd;
+  color: #cd45ee;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 65%; }
+
+/* line 143, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.form-submit.list-add-to-cart {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #d29fea;
+  border-color: -moz-use-text-color;
+  border-image: none;
+  border-style: none;
+  border-width: medium 3px medium medium;
+  color: white;
+  margin: 5px; }
+
+/* line 157, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.lastmenu {
+  margin-top: 50px; }
+
+/* line 160, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.item-list {
+  margin-top: 5px; }
+
+/* line 163, /opt/lampp/htdocs/lakersstore/assets/stylesheets/pages/_home */
+.pager li {
+  float: left;
+  padding-left: 10px; }

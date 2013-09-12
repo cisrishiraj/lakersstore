@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Date: Wed, 11 Sep 2013 13:34:08 GMT
+Server: Apache
+Last-Modified: Wed, 11 Sep 2013 13:34:08 +0000
+Cache-Control: no-cache, must-revalidate, post-check=0, pre-check=0
+ETag: "1378906448"
+Vary: Accept-Encoding,User-Agent
+Content-Encoding: gzip
+Content-Length: 94
+Connection: close
+Content-Type: text/html; charset=utf-8
+
+<div id="cart-block-contents-ajax" class="cart-empty">
+  No products in cart</div>
